@@ -17,7 +17,7 @@ for (i = 0; i < menuLink.length; i++) {
             } else {
                 menuSub.className = 'menu menu_sub';
             } 
-        }
-        return false; 
+            return false; 
+        } 
     }
 }
