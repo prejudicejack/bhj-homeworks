@@ -68,6 +68,20 @@ class Autocomplete {
   }
 
   getMatches( text ) {
+    const autocompleteValues = Array.from(document.querySelector('.autocomplete__input'));
+    const checkWords = autocompleteValues.filter(word => word.text.includes(text));
+    let inputWords = [];
+
+    for(let word of checkWords) {
+      let object = {};
+      object.text = word.text;
+      object.value = word.value;
+      inputWords.push(object);
+    }
+
+    return inputWords;
+  }
+
     /*
       TODO: этот метод нужно дописать
       text - фраза, которую вводят в поле поиска
@@ -80,14 +94,14 @@ class Autocomplete {
         text: 'Содержимое <option>',
         value: 'Содержимое атрибута value'
       }
-    */
+    
     return [
       {
         text: 'Чубакка',
         value: '1'
       }
     ];
-  }
+  }*/
 }
 
 new Autocomplete( document.querySelector( '.autocomplete' ));
