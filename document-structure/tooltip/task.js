@@ -26,6 +26,5 @@ function showTooltip(target) {
 
     let position = target.getBoundingClientRect();
     newTooltip.style.left = position.left + 'px';
-    let tooltipPosition = newTooltip.getBoundingClientRect();
-    newTooltip.style.top = position.top + tooltipPosition.height + 'px';
+    newTooltip.style.position = 'absolute';
 }
